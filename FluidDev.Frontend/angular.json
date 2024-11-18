@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "FluidDev": {
+    "FluidDev.Frontend": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/fluid-dev",
+            "outputPath": "dist/fluid-dev.frontend",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -62,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "FluidDev:build:production"
+              "buildTarget": "FluidDev.Frontend:build:production"
             },
             "development": {
-              "buildTarget": "FluidDev:build:development"
+              "buildTarget": "FluidDev.Frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "FluidDev:build"
+            "buildTarget": "FluidDev.Frontend:build"
           }
         },
         "test": {
